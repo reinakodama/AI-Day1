@@ -1,1 +1,6 @@
-# AI-Day1
+5 things I learned on Day1 of class
+1   the concept of AI is a new subject that is not even a century old. 
+2   in the history of AI, there were different eras where AI was being rapidly researched and eras where the research moved slower. Most times than not, research sped up when university professors researching the topic published a new discovery in a paper.
+3   AI is 2 dimensional, humanly vs rationally and acting vs thinking
+4   when thinking about AI, we should consider its environment and performance measure
+5   the environment can be visible/partially visible, static/dynamic, deterministic/stochastic, episodic/sequential, known/unknown
