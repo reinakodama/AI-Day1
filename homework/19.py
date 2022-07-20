@@ -1,12 +1,14 @@
 def prac1(numOfHours):
-    result = numOfHours*60
-    print(result)
+    result = int(input("number of hours "))
+    print(result*60)
 
-def prac2(minHour):
-    if(minHour<60):
+def prac2(run):
+    hr_min = (input("enter H or M "))
+    minHour = int(input("enter number "))
+    if(hr_min=="H"):
         result=minHour*60
         print(result)
-    elif(minHour>=60):
+    elif(hr_min=="M"):
         result=minHour/60
         print(result)
     else:
