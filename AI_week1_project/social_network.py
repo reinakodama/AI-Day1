@@ -2,25 +2,6 @@
 from  social_network_classes import SocialNetwork,Person
 import social_network_ui
 
-
-
-def mainMenu():
-    print("")
-    print("1. Create a new account")
-    print("2. Manage my account")
-    print("3. Quit")
-    print("********************************************************")
-    return input("Please Choose a number: ")
-
-def manageAccountMenu():
-    print("1. Edit my details")
-    print("2. Add a friend")
-    print("3. View all my friends")
-    print("4. View all my messages")
-    print("5. <- Go back ")
-    return input("Please Choose a number: ")
-
-
 #Create instance of main social network object
 ai_social_network = SocialNetwork()
 
@@ -41,10 +22,29 @@ if __name__ == "__main__":
             inner_menu_choice = social_network_ui.manageAccountMenu()
             #Handle inner menu here
             while True:
+                current_user = None
+                currentUserName = input("name of current user: ")
+                for person in ai_social_network.list_of_people:
+                    if currentUserName == person.id:
+                        current_user = person
                 if inner_menu_choice == "5":
+                    break
+                elif inner_menu_choice == "1":
+                    print("You are now in the edit my details menu")
+                    current_user.edit_details()
+                    break
+                elif inner_menu_choice == "2":
+                    print("You are now in the add a friend menu")
+                    break
+                elif inner_menu_choice == "3":
+                    print("You are now in the view all my friends menu")
+                    break
+                elif inner_menu_choice == "4":
+                    print("You are now in the view all my messages menu")
                     break
                 else:
                     inner_menu_choice = social_network_ui.manageAccountMenu()
+
 
         elif choice == "3":
             print("Thank you for visiting. Goodbye3")
